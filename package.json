@@ -1,0 +1,25 @@
+{
+  "name": "furmly-cli",
+  "version": "1.0.0",
+  "description": "Command line interface for furmly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "furmly": "./src/cli.js"
+  },
+  "keywords": [
+    "Furmly"
+  ],
+  "author": "Chidi Onuekwusi",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "libnpmsearch": "^2.0.0",
+    "libnpx": "^10.2.0",
+    "which": "^1.3.1"
+  }
+}

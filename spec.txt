@@ -1,0 +1,6 @@
+1. cli command is called furmly
+2. users must be able to create new scaffolds using furmly scaffold <name>.
+   a. scaffold menu will show available scaffolds.
+   b. users will pick a scaffold.
+   c. cli will run the picked (or passed as <name>) scaffold.
+3. users can check what scaffolds are available. by running furmly list-scaffolds
