@@ -16,15 +16,14 @@ const error = (...args) => {
 };
 const PREFIX = "generator-furmly-";
 class Robot {
-  constructor(settings) {
-    this.settings = settings;
+  constructor(settings = {}) {
     this.listScaffolds = this.listScaffolds.bind(this);
     this.runScaffold = this.runScaffold.bind(this);
+    this.prefix = settings.prefix || PREFIX;
   }
   async _listScaffolds(query) {
     info("fetching scaffolds...");
-    const packages = await search(`/${PREFIX}${query || "(.)"}/`);
-
+    const packages = await search(`/${this.prefix}${query || "(.)"}/`);
     return packages;
   }
   async listScaffolds() {
@@ -42,7 +41,7 @@ class Robot {
   async runScaffold(packageName) {
     try {
       if (!packageName || typeof packageName !== "string") {
-        const packages = await this._listScaffolds("react");
+        const packages = await this._listScaffolds();
         const answers = await inquirer.prompt([
           {
             name: "scaffold",
@@ -53,7 +52,7 @@ class Robot {
         ]);
         packageName = answers.scaffold;
       }
-      info(`running scaffold ${packageName}....`);
+      info(`running scaffold ${packageName}...`);
       const args = npx.parseArgs(
         ["-p", "yo", "-p", packageName, "-c", `yo ${packageName}`],
         which.sync("npm")

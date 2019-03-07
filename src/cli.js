@@ -2,7 +2,7 @@
 var program = require("commander");
 
 program
-  .version("0.1.0")
+  .version("0.0.1")
   .command("list-scaffolds", "list scaffolds available", { isDefault: true })
   .command(
     "run-scaffold [scaffoldName]",

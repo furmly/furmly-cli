@@ -1,1 +1,2 @@
-module.exports = new (require("./robot"))();
+const Robot = require("./robot");
+module.exports = new Robot();

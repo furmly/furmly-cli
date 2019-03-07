@@ -4,7 +4,7 @@
   "description": "Command line interface for furmly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./src/tests"
   },
   "bin": {
     "furmly": "./src/cli.js"
@@ -21,5 +21,10 @@
     "libnpmsearch": "^2.0.0",
     "libnpx": "^10.2.0",
     "which": "^1.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.2.7"
   }
 }
