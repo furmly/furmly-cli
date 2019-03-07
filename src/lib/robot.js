@@ -42,6 +42,10 @@ class Robot {
     try {
       if (!packageName || typeof packageName !== "string") {
         const packages = await this._listScaffolds();
+        if (!packages.length) {
+          log(info("there are no packages available right now."));
+          return;
+        }
         const answers = await inquirer.prompt([
           {
             name: "scaffold",
