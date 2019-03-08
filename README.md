@@ -1,4 +1,4 @@
-# Furmly-cli
+# Furmly-cli [![CircleCI](https://circleci.com/gh/furmly/furmly-cli.svg?style=svg)](https://circleci.com/gh/furmly/furmly-cli)
 
 Command line utility for 
 * search and locating furmly scaffold generators.
