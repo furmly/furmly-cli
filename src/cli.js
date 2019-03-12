@@ -8,4 +8,8 @@ program
     "run-scaffold [scaffoldName]",
     "runs a scaffold or displays scaffolds in the registry"
   )
+  .command(
+    "create-certs",
+    "creates self signed certificates using certificate-providers (e.g openssl)"
+  )
   .parse(process.argv);
