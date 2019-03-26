@@ -12,6 +12,7 @@
   "keywords": [
     "Furmly"
   ],
+  "repository": "https://github.com/furmly/furmly-cli",
   "author": "Chidi Onuekwusi",
   "license": "ISC",
   "dependencies": {
